@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Error from "./Error";
+import DisplayError from "./Error";
 import Loading from "./Loading";
 import UserInfo from "./UserInfo";
 
@@ -24,7 +24,7 @@ const UserProfile = ({ userId }) => {
     }, [userId]);
 
     if (error) {
-        return <Error />
+        return <DisplayError/>
     }
 
     if (!user) {
